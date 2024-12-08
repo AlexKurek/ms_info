@@ -10,7 +10,7 @@ from astropy.time import Time
 from astropy import units as u
 from astropy.coordinates import SkyCoord
 from astropy.coordinates import solar_system_ephemeris, EarthLocation
-from astropy.coordinates import get_body_barycentric, get_body, get_moon
+from astropy.coordinates import get_body
 
 
 def rad2deg(xx):
@@ -90,10 +90,10 @@ def main():
         moon_dec = moon.dec.value
         sun_hms,sun_dms = format_coords(sun_ra,sun_dec)
         moon_hms,moon_dms = format_coords(moon_ra,moon_dec)
-        delta_ra_sun = field_ra - sun_ra
-        delta_dec_sun = field_dec - sun_dec
-        delta_ra_moon = field_ra - moon_ra
-        delta_dec_moon = field_dec - moon_dec
+        # delta_ra_sun = field_ra - sun_ra
+        # delta_dec_sun = field_dec - sun_dec
+        # delta_ra_moon = field_ra - moon_ra
+        # delta_dec_moon = field_dec - moon_dec
         sun_sep = calcsep(field_ra,field_dec,sun_ra,sun_dec)
         moon_sep = calcsep(field_ra,field_dec,moon_ra,moon_dec)
         mylogger.info('%-28s %-5i %-5i %-12s %-12f %-12f %-16s %-16s %-12f %-12f %-12f %-16s %-16s %-12f' %

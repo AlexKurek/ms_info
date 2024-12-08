@@ -6,7 +6,6 @@ import logging
 import sys
 import numpy
 from astropy.coordinates import SkyCoord
-from astropy import units as u
 from astropy.time import Time
 from pyrap.tables import table
 from optparse import OptionParser
@@ -29,7 +28,7 @@ def main():
     doant = options.doant
     dofield = options.dofield
     doscan = options.doscan
-    docolour = options.docolour
+    # docolour = options.docolour
 
     if len(args) != 1:
             ri('Please specify a Measurement Set')

@@ -5,7 +5,6 @@
 
 import os
 import sys
-import glob
 import pickle
 import numpy
 import time
